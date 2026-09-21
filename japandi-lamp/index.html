@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noguchi-Style Rice Paper Floor Lamp | Japandi Ambient Lighting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5efe3;
+    --wood: #a9784f;
+    --ink: #2c2621;
+    --charcoal: #3d362f;
+    --accent: #c98a4b;
+    --soft: #e8ddc9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(180deg, #1c1712 0%, #2c2419 60%, #3d3225 100%);
+    color: var(--paper);
+    padding: 72px 24px 88px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 760px;
+    margin: 0 auto 20px;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: var(--soft);
+    max-width: 560px;
+    margin: 0 auto 36px;
+  }
+  .hero-img {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #1c1712;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 24px rgba(201,138,75,0.35);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,138,75,0.45); }
+
+  section { padding: 72px 24px; }
+  .benefits {
+    background: var(--paper);
+  }
+  .benefits h2 { text-align: center; font-size: 34px; margin-bottom: 48px; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--soft);
+    padding: 32px 28px;
+    border-radius: 6px;
+  }
+  .benefit-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .benefit-card p { font-size: 15px; color: var(--charcoal); }
+
+  .spotlight {
+    background: var(--charcoal);
+    color: var(--paper);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 6px; }
+  .spotlight .copy h2 { font-size: 32px; margin-bottom: 18px; color: var(--paper); }
+  .spotlight .copy p { color: var(--soft); margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs {
+    list-style: none;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--soft);
+  }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .spotlight .specs li span { color: var(--accent); margin-right: 8px; }
+
+  .steps {
+    background: var(--soft);
+    text-align: center;
+  }
+  .steps h2 { font-size: 32px; margin-bottom: 44px; }
+  .step-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .step-row div { background: var(--paper); padding: 28px 20px; border-radius: 6px; }
+  .step-row .step-num {
+    display: inline-block;
+    width: 32px; height: 32px;
+    line-height: 32px;
+    background: var(--wood);
+    color: #fff;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .step-row h3 { font-size: 17px; margin-bottom: 8px; }
+  .step-row p { font-size: 14px; color: var(--charcoal); }
+
+  .faq { background: var(--paper); max-width: 760px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid var(--soft); padding: 20px 0; }
+  .faq-item h3 { font-size: 17px; margin-bottom: 8px; }
+  .faq-item p { font-size: 15px; color: var(--charcoal); }
+
+  .final-cta {
+    background: linear-gradient(180deg, #3d3225 0%, #1c1712 100%);
+    color: var(--paper);
+    text-align: center;
+    padding: 88px 24px;
+  }
+  .final-cta h2 { font-size: 36px; max-width: 640px; margin: 0 auto 16px; }
+  .final-cta p { color: var(--soft); max-width: 520px; margin: 0 auto 32px; font-size: 16px; }
+
+  footer {
+    background: #14110d;
+    color: #a89c8a;
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 13px;
+  }
+  footer p { margin-bottom: 6px; }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Japandi Lighting</div>
+    <h1>A Handmade Paper Lantern That Turns Any Corner Into a Calm One</h1>
+    <p class="sub">Noguchi-inspired rice paper shade, tripod metal legs, soft ambient glow — the one lamp that makes a room feel finished.</p>
+    <div class="hero-img">
+      <img src="japandi-lamp-photo.jpg" alt="Rice paper floor lamp glowing warmly in a Japandi-style living room corner">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B0D5XWV9GQ?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why This Lamp, Not Another Floor Lamp</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">01</div>
+        <h3>Handcrafted Rice Paper Shade</h3>
+        <p>Diffuses light into a soft, warm glow instead of harsh overhead brightness — the difference between a room that feels lit and a room that feels lived-in.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">02</div>
+        <h3>Tool-Free Tripod Setup</h3>
+        <p>Unfold the metal legs, screw in an E26 bulb, done. No wiring, no instructions you need to translate.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">03</div>
+        <h3>Sculptural, Not Just Functional</h3>
+        <p>The mid-century snowman silhouette works as a lit sculpture during the day and a light source at night — doubles as decor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="japandi-lamp-photo.jpg" alt="Close view of the rice paper lantern shade and metal tripod base">
+    <div class="copy">
+      <h2>Built for the Corner You Never Know What to Do With</h2>
+      <p>Every living room has one — the empty corner next to the sofa, the dead space by the bookshelf. This lamp fills it with warmth instead of clutter.</p>
+      <p>At 48" tall with a 19.7" wide shade, it reads as a statement piece without overwhelming a small apartment or a shared living room.</p>
+      <ul class="specs">
+        <li><span>—</span>Finish: Natural rice paper + metal tripod</li>
+        <li><span>—</span>Bulb base: E26 (LED compatible)</li>
+        <li><span>—</span>Dimensions: 19.7"D x 19.7"W x 48"H</li>
+        <li><span>—</span>Rated 4.2★ · 50+ bought in the past month</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>From Box to Ambient Lighting in Under 10 Minutes</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Unfold the Tripod</h3>
+        <p>Three metal legs snap into place — no tools, no screws.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Attach the Shade</h3>
+        <p>The rice paper lantern slides onto the frame and locks at the top.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Add a Warm Bulb</h3>
+        <p>Any E26 bulb works — a soft warm-white LED gives the best glow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>Does it come with a bulb?</h3>
+    <p>No — it takes any standard E26 bulb, so you can choose your own warmth and brightness.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is the paper shade fragile?</h3>
+    <p>It's handcrafted rice paper over a wire frame — sturdy in normal use, but treat it gently when moving the lamp.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Will it fit in a small apartment?</h3>
+    <p>Yes — the tripod footprint is compact (19.7" wide), and it's available in smaller sizes too if you need something more petite.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Give the Room One Good Light Source Instead of Five Bad Ones</h2>
+    <p>Handmade rice paper shade, tripod stand, warm ambient glow — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B0D5XWV9GQ?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by CMHSYTKE, Amazon, or Isamu Noguchi / The Noguchi Museum.</p>
+</footer>
+
+</body>
+</html>
