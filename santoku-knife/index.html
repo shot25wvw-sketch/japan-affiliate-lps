@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Santoku Knife | Kai Seki Magoroku, Made in Japan</title>
+<meta name="description" content="An authentic Kai Seki Magoroku santoku knife, made in Seki, Japan - the country's historic cutlery capital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel: #4a5460;
+    --steel-dark: #333a43;
+    --wood: #c9963f;
+    --cream: #faf7f2;
+    --cream-2: #ece7db;
+    --ink: #2c2925;
+    --ink-soft: #6b6459;
+    --line: #e2ddc9;
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.65;
+  }
+  h1,h2,h3{
+    font-family:'Playfair Display',Georgia,serif;
+    margin:0 0 .5em;
+    color:var(--ink);
+  }
+  p{margin:0 0 1em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+
+  header.top{
+    padding:22px 0;
+    text-align:center;
+    letter-spacing:.14em;
+    font-size:13px;
+    color:var(--steel-dark);
+    font-weight:600;
+    text-transform:uppercase;
+  }
+
+  .hero{
+    background:linear-gradient(180deg,var(--cream-2) 0%, var(--cream) 100%);
+    padding:20px 0 60px;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (max-width:760px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-art{order:-1;}
+  }
+  .eyebrow{
+    display:inline-block;
+    background:rgba(74,84,96,.1);
+    color:var(--steel-dark);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.03em;
+    margin-bottom:18px;
+  }
+  h1{font-size:clamp(32px,4.6vw,48px);line-height:1.15;}
+  .hero p.lead{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .stars{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:18px 0 26px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .stars .num{color:var(--wood);font-weight:700;font-size:16px;}
+  .star-icons{color:var(--wood);letter-spacing:2px;font-size:16px;}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--steel-dark);
+    color:#fff;
+    font-weight:600;
+    font-size:16px;
+    padding:16px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    box-shadow:0 10px 24px rgba(51,58,67,.35);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{background:#22262c;transform:translateY(-2px);box-shadow:0 14px 28px rgba(51,58,67,.42);}
+  .btn-arrow{font-size:18px;}
+  .micro{
+    margin-top:12px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  .product-frame{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 20px 40px rgba(44,41,37,.1);
+  }
+  .product-frame img{border-radius:14px;width:100%;height:auto;}
+
+  section.benefits{padding:56px 0;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr;}}
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 22px;
+    text-align:center;
+  }
+  .card .icon{
+    width:52px;height:52px;
+    margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(74,84,96,.08);
+    border-radius:50%;
+    color:var(--steel-dark);
+  }
+  .card h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px;}
+  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  section.spotlight{background:var(--cream-2);padding:64px 0;}
+  .spot-inner{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:44px;
+    align-items:center;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    border:1px solid var(--line);
+  }
+  @media (max-width:760px){.spot-inner{grid-template-columns:1fr;padding:28px 20px;}}
+  .spot-inner img{border-radius:14px;}
+  .spot-tag{
+    display:inline-block;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--steel-dark);
+    background:rgba(74,84,96,.08);
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+  ul.features{list-style:none;padding:0;margin:20px 0 26px;}
+  ul.features li{
+    display:flex;gap:10px;align-items:flex-start;
+    margin-bottom:12px;font-size:15px;color:var(--ink);
+  }
+  ul.features li .tick{
+    flex:none;width:20px;height:20px;border-radius:50%;
+    background:var(--steel-dark);color:#fff;font-size:12px;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+
+  section.steps{padding:64px 0;}
+  .steps-head{text-align:center;max-width:560px;margin:0 auto 40px;}
+  .steps-head p{color:var(--ink-soft);}
+  .stepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:step;}
+  @media (max-width:760px){.stepgrid{grid-template-columns:1fr;}}
+  .step{text-align:center;position:relative;}
+  .step .num{
+    counter-increment:step;
+    width:40px;height:40px;line-height:40px;border-radius:50%;
+    background:var(--steel-dark);color:#fff;
+    font-family:'Playfair Display',serif;font-weight:700;margin:0 auto 14px;
+  }
+  .step .num::before{content:counter(step);}
+  .step h3{font-size:16px;font-family:'Poppins',sans-serif;font-weight:600;margin-bottom:6px;}
+  .step p{font-size:14px;color:var(--ink-soft);}
+
+  section.faq{background:var(--cream-2);padding:60px 0;}
+  .faq-item{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin-bottom:14px;
+  }
+  .faq-item h3{
+    font-family:'Poppins',sans-serif;font-size:15.5px;font-weight:600;
+    margin-bottom:8px;color:var(--steel-dark);
+  }
+  .faq-item p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  section.final{padding:70px 0 80px;text-align:center;}
+  section.final h2{font-size:clamp(26px,3.6vw,34px);}
+  section.final p.lead{max-width:46ch;margin:0 auto 30px;color:var(--ink-soft);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:30px 0 40px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  footer p{margin:0 0 6px;}
+</style>
+</head>
+<body>
+
+<header class="top">Japanese Kitchen &amp; Craftsmanship</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Made in Seki, Japan</span>
+      <h1>A Knife from Japan's Cutlery Capital</h1>
+      <p class="lead">A Kai Seki Magoroku santoku knife, forged in Seki — a city with centuries of swordsmithing history that's now Japan's home of world-class kitchen cutlery.</p>
+
+      <div class="stars">
+        <span class="star-icons">★★★★</span>
+        <span class="num">4.3</span>
+        <span>· 91+ ratings</span>
+      </div>
+
+      <a class="btn" href="https://www.amazon.com/dp/B00YQLVH0Q?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+        Check Price on Amazon <span class="btn-arrow">→</span>
+      </a>
+      <p class="micro">You'll be taken to Amazon.com to complete your purchase securely.</p>
+    </div>
+
+    <div class="hero-art">
+      <div class="product-frame">
+        <img src="https://m.media-amazon.com/images/I/51QlK-rTbML._AC_SL1500_.jpg" alt="Kai Seki Magoroku Wakatake santoku knife" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap grid3">
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Genuinely Made in Japan</h3>
+      <p>Forged by Kai Corporation in Seki, Gifu — Japan's historic blade-making region.</p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3>One Knife, Every Task</h3>
+      <p>Santoku means "three virtues" — built to handle meat, fish, and vegetables equally well.</p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10c2 3 2 5 0 8M12 10c2 3 2 5 0 8M20 10c2 3 2 5 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Comfortable Grip</h3>
+      <p>A balanced, ergonomic handle designed for control during long prep sessions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight" id="product">
+  <div class="wrap">
+    <div class="spot-inner">
+      <img src="https://m.media-amazon.com/images/I/51QlK-rTbML._AC_SL1500_.jpg" alt="Kai Seki Magoroku santoku knife product photo" loading="lazy">
+      <div>
+        <span class="spot-tag">Kai · Seki Magoroku Wakatake Santoku</span>
+        <h2>5.7" Santoku Knife, Made in Japan</h2>
+        <p style="color:var(--ink-soft);">A compact, all-purpose kitchen knife from one of Japan's most trusted cutlery makers.</p>
+        <ul class="features">
+          <li><span class="tick">✓</span> Genuine Kai Corporation knife, made in Seki, Japan</li>
+          <li><span class="tick">✓</span> Santoku shape for slicing, dicing, and mincing in one blade</li>
+          <li><span class="tick">✓</span> Well-balanced, comfortable handle for everyday prep</li>
+          <li><span class="tick">✓</span> A trusted brand name for gifting or your own kitchen</li>
+          <li><span class="tick">✓</span> Rated 4.3★ from 91+ customers</li>
+        </ul>
+        <a class="btn" href="https://www.amazon.com/dp/B00YQLVH0Q?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+          View on Amazon <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="steps-head">
+      <h2>Why Santoku Works So Well</h2>
+      <p>A shape designed around how home cooks actually chop.</p>
+    </div>
+    <div class="stepgrid">
+      <div class="step">
+        <div class="num"></div>
+        <h3>Flatter Edge</h3>
+        <p>A straighter blade profile makes clean, even cuts through vegetables easier.</p>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h3>Lighter Weight</h3>
+        <p>Generally lighter than a Western chef's knife, reducing hand fatigue during prep.</p>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h3>Compact Size</h3>
+        <p>Easier to maneuver in smaller kitchens or for less-experienced cooks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap" style="max-width:720px;">
+    <h2 style="text-align:center;margin-bottom:30px;">Good to Know</h2>
+    <div class="faq-item">
+      <h3>What does "santoku" mean?</h3>
+      <p>Santoku translates to "three virtues" or "three uses," referring to its versatility for meat, fish, and vegetables.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this really made in Japan?</h3>
+      <p>Yes — it's manufactured by Kai Corporation in Seki, Gifu, a city renowned for centuries of Japanese blade craftsmanship.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How should I care for it?</h3>
+      <p>Hand washing and drying immediately after use, along with periodic sharpening, will help it perform its best for years.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>A Knife That Earns Its Place</h2>
+    <p class="lead">Genuine Japanese craftsmanship that makes everyday cooking a little easier.</p>
+    <a class="btn" href="https://www.amazon.com/dp/B00YQLVH0Q?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+      Shop the Santoku Knife on Amazon <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>This page is an independent product guide and is not affiliated with or endorsed by Amazon.com, Inc. or Kai Corporation. Product image courtesy of Amazon.com.</p>
+    <p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+  </div>
+</footer>
+
+</body>
+</html>
