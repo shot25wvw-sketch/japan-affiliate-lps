@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Ramune Soda 6-Flavor Variety Set</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #eaf7ff;
+    --bubble-pink: #ff8fab;
+    --bubble-blue: #4dd0e1;
+    --bubble-green: #8bd450;
+    --ink: #1f2937;
+    --charcoal: #2d3540;
+    --soft: #fff4e6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--ink);
+    background: var(--sky);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Baloo 2', cursive; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(160deg, #4dd0e1 0%, #7fd8f7 45%, #eaf7ff 100%);
+    padding: 64px 24px 80px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    display: inline-block;
+    background: #fff;
+    color: var(--bubble-pink);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  header.hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 18px;
+    color: #103a4a;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #275366;
+    max-width: 540px;
+    margin: 0 auto 34px;
+  }
+  .hero-img {
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto 34px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 50px rgba(15,60,80,0.25);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--bubble-pink);
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Baloo 2', cursive;
+    font-size: 17px;
+    padding: 16px 42px;
+    border-radius: 40px;
+    box-shadow: 0 10px 24px rgba(255,143,171,0.45);
+    transition: transform 0.15s ease;
+  }
+  .cta-btn:hover { transform: translateY(-2px) scale(1.02); }
+
+  section { padding: 68px 24px; }
+  .benefits { background: #fff; }
+  .benefits h2 { text-align: center; font-size: 32px; margin-bottom: 44px; color: #103a4a; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .benefit-card {
+    background: var(--soft);
+    padding: 30px 26px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  .benefit-card .icon { font-size: 36px; margin-bottom: 14px; }
+  .benefit-card h3 { font-size: 19px; margin-bottom: 8px; color: #103a4a; }
+  .benefit-card p { font-size: 14px; color: #555; }
+
+  .spotlight {
+    background: linear-gradient(160deg, #ffe1ec 0%, #fff4e6 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 16px; }
+  .spotlight .copy h2 { font-size: 30px; margin-bottom: 16px; color: #103a4a; }
+  .spotlight .copy p { color: #444; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 20px; font-size: 14px; color: #444; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px dashed rgba(0,0,0,0.1); }
+  .spotlight .specs li span { color: var(--bubble-pink); margin-right: 8px; font-weight: 700; }
+
+  .steps { background: #fff; text-align: center; }
+  .steps h2 { font-size: 30px; margin-bottom: 40px; color: #103a4a; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .step-row div { background: var(--sky); padding: 26px 20px; border-radius: 16px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--bubble-blue); color: #fff; border-radius: 50%;
+    margin-bottom: 10px; font-family: 'Baloo 2', cursive; font-weight: 700;
+  }
+  .step-row h3 { font-size: 16px; margin-bottom: 6px; color: #103a4a; }
+  .step-row p { font-size: 14px; color: #555; }
+
+  .faq { background: var(--soft); max-width: 760px; margin: 0 auto; border-radius: 20px; }
+  .faq h2 { text-align: center; font-size: 30px; margin-bottom: 36px; color: #103a4a; }
+  .faq-item { border-bottom: 1px solid rgba(0,0,0,0.08); padding: 18px 0; }
+  .faq-item h3 { font-size: 16px; margin-bottom: 6px; color: #103a4a; }
+  .faq-item p { font-size: 14px; color: #555; }
+
+  .final-cta {
+    background: linear-gradient(160deg, #ff8fab 0%, #ffb199 100%);
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .final-cta h2 { font-size: 34px; max-width: 620px; margin: 0 auto 16px; }
+  .final-cta p { max-width: 520px; margin: 0 auto 30px; font-size: 16px; opacity: 0.95; }
+  .final-cta .cta-btn { background: #fff; color: var(--bubble-pink); }
+
+  footer { background: #103a4a; color: #a9c4cf; text-align: center; padding: 30px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: #fff; }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Japanese Soda Classic</div>
+    <h1>Six Fizzy Flavors, One Bottle Pop at a Time</h1>
+    <p class="sub">Real Japanese ramune soda with the iconic marble-stopper bottle — a nostalgic summer treat in every fizzy sip.</p>
+    <div class="hero-img">
+      <img src="ramune-set-photo.jpg" alt="Six colorful glass Japanese ramune soda bottles lined up on a wooden table">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01JU2W4DY?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why Ramune, Not Just Another Soda</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="icon">🔵</div>
+        <h3>The Marble Bottle Experience</h3>
+        <p>Push the marble down with the included cap-tool and watch it drop and rattle — half the fun is opening it.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🍇</div>
+        <h3>Six Real Flavors</h3>
+        <p>A true variety pack — grape, melon, strawberry, and more, so nobody in the room gets the same bottle twice.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎏</div>
+        <h3>Authentic Japanese Import</h3>
+        <p>The same soda sold at summer festivals across Japan — light, fizzy, and never overly sweet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="ramune-set-photo.jpg" alt="Ramune bottles with condensation on a wooden table, top view">
+    <div class="copy">
+      <h2>A Fun Gift, a Fun Party Favor, a Fun Fridge Surprise</h2>
+      <p>Ramune bottles photograph beautifully and taste even better cold. Line them up for a party table or just keep a few chilled for a hot afternoon.</p>
+      <p>Each bottle is a self-contained ritual — pop, fizz, sip — that makes it more of an experience than a drink.</p>
+      <ul class="specs">
+        <li><span>—</span>6.6 fl oz per bottle, 6-bottle variety set</li>
+        <li><span>—</span>Flavors vary: grape, melon, strawberry, peach, yuzu & more</li>
+        <li><span>—</span>Includes the classic push-marble opening cap</li>
+        <li><span>—</span>Rated 4.4★ from real customers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How to Open Your First Ramune</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Remove the Cap</h3>
+        <p>Peel back the plastic film and pop off the outer cap to reveal the pusher.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Push the Marble</h3>
+        <p>Use the pusher to press the marble down into the bottle's neck chamber.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Enjoy the Fizz</h3>
+        <p>Sip carefully — the marble rattles at the neck as you drink. That's part of the fun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>Can I choose the flavors?</h3>
+    <p>Flavors are a surprise variety mix — grape, melon, strawberry, peach, yuzu, and other seasonal picks.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is ramune very sweet?</h3>
+    <p>It's lightly carbonated and fruity, closer to a soft lemon-lime soda than a heavy sugary drink.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it easy to open?</h3>
+    <p>It takes one try to get used to — the cap doubles as the tool for pushing the marble in.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Bring a Little Summer Festival Home</h2>
+    <p>Six real Japanese ramune flavors, the classic marble bottle, ready to chill and share.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01JU2W4DY?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by SimplyAPlus, Sprout Talk, Shirakiku, or Amazon.</p>
+</footer>
+
+</body>
+</html>

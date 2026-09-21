@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morinaga Hi-Chew Japanese Fruit Chews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8f0;
+    --peach: #ffb199;
+    --grape: #b592e0;
+    --apple: #a4d65e;
+    --strawberry: #ff7f9c;
+    --ink: #2d2a26;
+    --soft: #fdeee0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Baloo 2', cursive; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(160deg, #ffd6a5 0%, #ffb199 50%, #ff9baf 100%);
+    padding: 64px 24px 80px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    display: inline-block;
+    background: #fff;
+    color: var(--strawberry);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  header.hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 18px;
+    color: #5a2d1f;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #6b3a28;
+    max-width: 540px;
+    margin: 0 auto 34px;
+  }
+  .hero-img {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto 34px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 50px rgba(90,45,31,0.25);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--strawberry);
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Baloo 2', cursive;
+    font-size: 17px;
+    padding: 16px 42px;
+    border-radius: 40px;
+    box-shadow: 0 10px 24px rgba(255,127,156,0.45);
+    transition: transform 0.15s ease;
+  }
+  .cta-btn:hover { transform: translateY(-2px) scale(1.02); }
+
+  section { padding: 68px 24px; }
+  .benefits { background: #fff; }
+  .benefits h2 { text-align: center; font-size: 32px; margin-bottom: 44px; color: #5a2d1f; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .benefit-card {
+    background: var(--soft);
+    padding: 30px 26px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  .benefit-card .icon { font-size: 36px; margin-bottom: 14px; }
+  .benefit-card h3 { font-size: 19px; margin-bottom: 8px; color: #5a2d1f; }
+  .benefit-card p { font-size: 14px; color: #555; }
+
+  .spotlight {
+    background: linear-gradient(160deg, #f3e5ff 0%, #fdeee0 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 16px; }
+  .spotlight .copy h2 { font-size: 30px; margin-bottom: 16px; color: #5a2d1f; }
+  .spotlight .copy p { color: #444; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 20px; font-size: 14px; color: #444; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px dashed rgba(0,0,0,0.1); }
+  .spotlight .specs li span { color: var(--strawberry); margin-right: 8px; font-weight: 700; }
+
+  .steps { background: #fff; text-align: center; }
+  .steps h2 { font-size: 30px; margin-bottom: 40px; color: #5a2d1f; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .step-row div { background: var(--cream); padding: 26px 20px; border-radius: 16px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--grape); color: #fff; border-radius: 50%;
+    margin-bottom: 10px; font-family: 'Baloo 2', cursive; font-weight: 700;
+  }
+  .step-row h3 { font-size: 16px; margin-bottom: 6px; color: #5a2d1f; }
+  .step-row p { font-size: 14px; color: #555; }
+
+  .faq { background: var(--soft); max-width: 760px; margin: 0 auto; border-radius: 20px; }
+  .faq h2 { text-align: center; font-size: 30px; margin-bottom: 36px; color: #5a2d1f; }
+  .faq-item { border-bottom: 1px solid rgba(0,0,0,0.08); padding: 18px 0; }
+  .faq-item h3 { font-size: 16px; margin-bottom: 6px; color: #5a2d1f; }
+  .faq-item p { font-size: 14px; color: #555; }
+
+  .final-cta {
+    background: linear-gradient(160deg, #b592e0 0%, #ff9baf 100%);
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .final-cta h2 { font-size: 34px; max-width: 620px; margin: 0 auto 16px; }
+  .final-cta p { max-width: 520px; margin: 0 auto 30px; font-size: 16px; opacity: 0.95; }
+  .final-cta .cta-btn { background: #fff; color: var(--grape); }
+
+  footer { background: #5a2d1f; color: #d9bba7; text-align: center; padding: 30px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: #fff; }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Japan's Favorite Chewy Candy</div>
+    <h1>The Soft, Fruity Chew Japan Can't Stop Eating</h1>
+    <p class="sub">Real fruit-flavored, gluten-free chewy candy from Morinaga — a small bite of Japan's most beloved snack, in every color of the bag.</p>
+    <div class="hero-img">
+      <img src="hi-chew-photo.jpg" alt="Colorful individually-wrapped Japanese fruit chew candies spilling out of a paper gift bag">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B00886GV1A?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why This Candy Has a Cult Following</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="icon">🍓</div>
+        <h3>Real Fruit Flavor</h3>
+        <p>Since 1975, Morinaga has perfected a soft, taffy-like chew that tastes like actual fruit — not artificial sugar.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎐</div>
+        <h3>Uniquely Chewy Texture</h3>
+        <p>Creamy and soft instead of sticky or hard — designed to be swallowed comfortably, unlike Western gum.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎁</div>
+        <h3>Individually Wrapped</h3>
+        <p>Easy to share, easy to pack in a lunch bag or gift box — no mess, no sticking together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="hi-chew-photo.jpg" alt="Assorted fruit chew candies in pastel wrappers on a wooden surface">
+    <div class="copy">
+      <h2>A 90-Year-Old Recipe, Reinvented Into Japan's #1 Chewy Candy</h2>
+      <p>What started as a chewing-gum alternative in 1931 became one of Japan's most recognized sweets, with over 165 flavors developed since.</p>
+      <p>This regular mix bag brings the classic flavor lineup — the same one found in convenience stores across Japan.</p>
+      <ul class="specs">
+        <li><span>—</span>3.53 oz bag, 8 pieces per serving</li>
+        <li><span>—</span>Gluten-free</li>
+        <li><span>—</span>Made by Morinaga, Japan's original chewy-candy maker</li>
+        <li><span>—</span>Rated 4.7★ from over 2,700 reviews</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>Perfect For</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Snack Drawer Staple</h3>
+        <p>A go-to sweet treat that doesn't melt, crumble, or need refrigeration.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Care Package Add-On</h3>
+        <p>Small, individually wrapped, and travel-friendly — an easy addition to any gift box.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>First Taste of J-Candy</h3>
+        <p>A great entry point if you're curious about Japanese snacks but don't know where to start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>What flavors are in the regular mix?</h3>
+    <p>The classic lineup includes grape, strawberry, and green apple among the rotating fruit flavors.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it vegan or gluten-free?</h3>
+    <p>It's labeled gluten-free; check the ingredient list on the package for full allergen details.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How is it different from gum?</h3>
+    <p>It has the soft, chewy texture of taffy but is meant to be fully eaten — no chewing gum base.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Taste the Candy Japan Has Loved for Generations</h2>
+    <p>Soft, fruity, individually wrapped — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B00886GV1A?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by Morinaga, HI-CHEW, or Amazon.</p>
+</footer>
+
+</body>
+</html>
