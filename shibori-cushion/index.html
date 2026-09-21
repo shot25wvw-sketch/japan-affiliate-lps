@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shibori Indigo Cushion Cover | Boho Japandi Pillow</title>
+<meta name="description" content="A shibori tie-dye indigo cushion cover - an easy, affordable way to bring Japandi texture into any room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo: #2f4a68;
+    --indigo-dark: #203449;
+    --cream: #faf7f0;
+    --cream-2: #ece6d6;
+    --ink: #322f28;
+    --ink-soft: #6b6459;
+    --gold: #c9963f;
+    --gold-dark: #a97b2f;
+    --line: #e2ddc9;
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.65;
+  }
+  h1,h2,h3{
+    font-family:'Playfair Display',Georgia,serif;
+    margin:0 0 .5em;
+    color:var(--ink);
+  }
+  p{margin:0 0 1em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+
+  header.top{
+    padding:22px 0;
+    text-align:center;
+    letter-spacing:.14em;
+    font-size:13px;
+    color:var(--indigo);
+    font-weight:600;
+    text-transform:uppercase;
+  }
+
+  .hero{
+    background:linear-gradient(180deg,var(--cream-2) 0%, var(--cream) 100%);
+    padding:20px 0 60px;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (max-width:760px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-art{order:-1;}
+  }
+  .eyebrow{
+    display:inline-block;
+    background:rgba(47,74,104,.1);
+    color:var(--indigo);
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.03em;
+    margin-bottom:18px;
+  }
+  h1{font-size:clamp(32px,4.6vw,48px);line-height:1.15;}
+  .hero p.lead{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .stars{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:18px 0 26px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .stars .num{color:var(--gold-dark);font-weight:700;font-size:16px;}
+  .star-icons{color:var(--gold);letter-spacing:2px;font-size:16px;}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--indigo);
+    color:#fff;
+    font-weight:600;
+    font-size:16px;
+    padding:16px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    box-shadow:0 10px 24px rgba(47,74,104,.35);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{background:var(--indigo-dark);transform:translateY(-2px);box-shadow:0 14px 28px rgba(47,74,104,.42);}
+  .btn-arrow{font-size:18px;}
+  .micro{
+    margin-top:12px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  .hero-art{display:flex;justify-content:center;}
+  .hero-art svg{width:100%;max-width:260px;}
+
+  section.benefits{padding:56px 0;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr;}}
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 22px;
+    text-align:center;
+  }
+  .card .icon{
+    width:52px;height:52px;
+    margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(47,74,104,.08);
+    border-radius:50%;
+    color:var(--indigo);
+  }
+  .card h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px;}
+  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  section.spotlight{background:var(--cream-2);padding:64px 0;}
+  .spot-inner{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:44px;
+    align-items:center;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    border:1px solid var(--line);
+  }
+  @media (max-width:760px){.spot-inner{grid-template-columns:1fr;padding:28px 20px;}}
+  .spot-tag{
+    display:inline-block;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--indigo);
+    background:rgba(47,74,104,.08);
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+  ul.features{list-style:none;padding:0;margin:20px 0 26px;}
+  ul.features li{
+    display:flex;gap:10px;align-items:flex-start;
+    margin-bottom:12px;font-size:15px;color:var(--ink);
+  }
+  ul.features li .tick{
+    flex:none;width:20px;height:20px;border-radius:50%;
+    background:var(--indigo);color:#fff;font-size:12px;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+
+  section.steps{padding:64px 0;}
+  .steps-head{text-align:center;max-width:560px;margin:0 auto 40px;}
+  .steps-head p{color:var(--ink-soft);}
+  .stepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:step;}
+  @media (max-width:760px){.stepgrid{grid-template-columns:1fr;}}
+  .step{text-align:center;position:relative;}
+  .step .num{
+    counter-increment:step;
+    width:40px;height:40px;line-height:40px;border-radius:50%;
+    background:var(--indigo-dark);color:#fff;
+    font-family:'Playfair Display',serif;font-weight:700;margin:0 auto 14px;
+  }
+  .step .num::before{content:counter(step);}
+  .step h3{font-size:16px;font-family:'Poppins',sans-serif;font-weight:600;margin-bottom:6px;}
+  .step p{font-size:14px;color:var(--ink-soft);}
+
+  section.faq{background:var(--cream-2);padding:60px 0;}
+  .faq-item{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin-bottom:14px;
+  }
+  .faq-item h3{
+    font-family:'Poppins',sans-serif;font-size:15.5px;font-weight:600;
+    margin-bottom:8px;color:var(--indigo);
+  }
+  .faq-item p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+  section.final{padding:70px 0 80px;text-align:center;}
+  section.final h2{font-size:clamp(26px,3.6vw,34px);}
+  section.final p.lead{max-width:46ch;margin:0 auto 30px;color:var(--ink-soft);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:30px 0 40px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  footer p{margin:0 0 6px;}
+</style>
+</head>
+<body>
+
+<header class="top">Japanese Textile &amp; Interior</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Shibori Tie-Dye Pattern</span>
+      <h1>The Easiest Way to Try Japandi Style</h1>
+      <p class="lead">A hand-dyed-look shibori cushion cover that swaps in over your existing pillows — an instant, affordable way to bring indigo texture into a sofa or reading chair.</p>
+
+      <div class="stars">
+        <span class="star-icons">★★★★</span>
+        <span class="num">4.2</span>
+        <span>· 344+ ratings</span>
+      </div>
+
+      <a class="btn" href="https://www.amazon.com/dp/B08KD37M63?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+        Check Price on Amazon <span class="btn-arrow">→</span>
+      </a>
+      <p class="micro">You'll be taken to Amazon.com to complete your purchase securely.</p>
+    </div>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="150" cy="255" rx="95" ry="14" fill="#203449" opacity="0.07"/>
+        <rect x="70" y="90" width="160" height="140" rx="14" fill="#f1ece0" stroke="#2f4a68" stroke-width="4"/>
+        <g stroke="#2f4a68" stroke-width="3" opacity="0.8">
+          <path d="M90 110l20 20M120 110l20 20M150 110l20 20M180 110l20 20"/>
+          <path d="M90 150l20 20M120 150l20 20M150 150l20 20M180 150l20 20"/>
+          <path d="M90 190l20 20M120 190l20 20M150 190l20 20M180 190l20 20"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap grid3">
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Instant Refresh</h3>
+      <p>Swap a cover in seconds and a plain sofa suddenly feels intentional and layered.</p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Low Commitment</h3>
+      <p>A budget-friendly way to try the shibori/Japandi look before investing in bigger pieces.</p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10c2 3 2 5 0 8M12 10c2 3 2 5 0 8M20 10c2 3 2 5 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Fits Standard Inserts</h3>
+      <p>Sized for standard 18x18 inch pillow inserts you likely already own.</p>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight" id="product">
+  <div class="wrap">
+    <div class="spot-inner">
+      <div class="hero-art">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="150" cy="255" rx="95" ry="14" fill="#203449" opacity="0.07"/>
+          <rect x="80" y="80" width="140" height="140" rx="14" fill="#f1ece0" stroke="#2f4a68" stroke-width="4" transform="rotate(-2 150 150)"/>
+          <g stroke="#2f4a68" stroke-width="3" opacity="0.8">
+            <path d="M100 100l18 18M128 100l18 18M156 100l18 18M184 100l18 18"/>
+            <path d="M100 140l18 18M128 140l18 18M156 140l18 18M184 140l18 18"/>
+            <path d="M100 180l18 18M128 180l18 18M156 180l18 18M184 180l18 18"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <span class="spot-tag">VERSUSWOLF · Shibori Indigo Cushion Cover</span>
+        <h2>Tie-Dye Indigo Throw Pillow Cover, 18 x 18 in</h2>
+        <p style="color:var(--ink-soft);">A cotton-linen cover in a shibori-inspired abstract pattern.</p>
+        <ul class="features">
+          <li><span class="tick">✓</span> Shibori-style tie-dye pattern in indigo and cream</li>
+          <li><span class="tick">✓</span> Cotton-linen blend, soft and durable</li>
+          <li><span class="tick">✓</span> Standard 18 x 18 inch size, zipper closure</li>
+          <li><span class="tick">✓</span> Works with sofas, armchairs, beds, and window seats</li>
+          <li><span class="tick">✓</span> Rated 4.2★ from 344+ customers</li>
+        </ul>
+        <a class="btn" href="https://www.amazon.com/dp/B08KD37M63?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+          View on Amazon <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="steps-head">
+      <h2>An Easy Refresh, In Minutes</h2>
+      <p>No new furniture needed — just a cover swap.</p>
+    </div>
+    <div class="stepgrid">
+      <div class="step">
+        <div class="num"></div>
+        <h3>Unzip</h3>
+        <p>Slide your existing pillow insert out of its old cover.</p>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h3>Insert</h3>
+        <p>Tuck it into the new shibori cover and zip it closed.</p>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <h3>Style</h3>
+        <p>Pair it with a neutral throw and a second pattern for a layered look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap" style="max-width:720px;">
+    <h2 style="text-align:center;margin-bottom:30px;">Good to Know</h2>
+    <div class="faq-item">
+      <h3>Does it come with a pillow insert?</h3>
+      <p>No — this is a cover only, designed to fit a standard 18 x 18 inch pillow insert.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is the pattern printed or dyed?</h3>
+      <p>It's a printed shibori-inspired design, giving the hand-dyed look at a more accessible price point.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I clean it?</h3>
+      <p>Check the included care label — most covers like this are machine washable on a gentle cycle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>A Small Swap, a Big Difference</h2>
+    <p class="lead">An easy, affordable way to bring indigo texture into your space today.</p>
+    <a class="btn" href="https://www.amazon.com/dp/B08KD37M63?tag=excellentjapa-20" target="_blank" rel="nofollow sponsored noopener">
+      Shop the Cushion Cover on Amazon <span class="btn-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>This page is an independent product guide and is not affiliated with or endorsed by Amazon.com, Inc.</p>
+    <p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+  </div>
+</footer>
+
+</body>
+</html>
