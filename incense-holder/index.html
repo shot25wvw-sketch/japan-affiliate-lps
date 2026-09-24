@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Ceramic Incense Holder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --clay: #7a5a3a;
+    --cream: #f2ece0;
+    --ink: #2b2823;
+    --charcoal: #3a3530;
+    --accent: #b98a52;
+    --soft: #e6ddc9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(180deg, #2a2117 0%, #3a2f21 55%, #4a3c2b 100%);
+    color: var(--cream);
+    padding: 72px 24px 88px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #ded1bd;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .hero-img {
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #2a2117;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 24px rgba(185,138,82,0.35);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(185,138,82,0.45); }
+
+  section { padding: 72px 24px; }
+  .benefits { background: var(--cream); }
+  .benefits h2 { text-align: center; font-size: 34px; margin-bottom: 48px; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--soft);
+    padding: 32px 28px;
+    border-radius: 6px;
+  }
+  .benefit-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .benefit-card p { font-size: 15px; color: var(--charcoal); }
+
+  .spotlight {
+    background: var(--charcoal);
+    color: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 6px; }
+  .spotlight .copy h2 { font-size: 32px; margin-bottom: 18px; color: var(--cream); }
+  .spotlight .copy p { color: #ded1bd; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 24px; font-size: 14px; color: #ded1bd; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .spotlight .specs li span { color: var(--accent); margin-right: 8px; }
+
+  .steps { background: var(--soft); text-align: center; }
+  .steps h2 { font-size: 32px; margin-bottom: 44px; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .step-row div { background: var(--cream); padding: 28px 20px; border-radius: 6px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--accent); color: #fff; border-radius: 50%;
+    margin-bottom: 12px; font-family: 'Cormorant Garamond', serif;
+  }
+  .step-row h3 { font-size: 17px; margin-bottom: 8px; }
+  .step-row p { font-size: 14px; color: var(--charcoal); }
+
+  .faq { background: var(--cream); max-width: 760px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid var(--soft); padding: 20px 0; }
+  .faq-item h3 { font-size: 17px; margin-bottom: 8px; }
+  .faq-item p { font-size: 15px; color: var(--charcoal); }
+
+  .final-cta {
+    background: linear-gradient(180deg, #4a3c2b 0%, #2a2117 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 88px 24px;
+  }
+  .final-cta h2 { font-size: 36px; max-width: 640px; margin: 0 auto 16px; }
+  .final-cta p { color: #ded1bd; max-width: 520px; margin: 0 auto 32px; font-size: 16px; }
+
+  footer { background: #17130d; color: #a89c8a; text-align: center; padding: 32px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Mino Ware Ceramic</div>
+    <h1>A Small Bowl That Makes Every Stick of Incense Look Intentional</h1>
+    <p class="sub">Handmade-style ceramic incense holder from Japan — a simple, elegant catch for ash and smoke, made for daily use.</p>
+    <div class="hero-img">
+      <img src="incense-holder-photo.jpg" alt="Ceramic incense holder bowl with a brass stick holder and rising smoke on a wooden table">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B09VXG99NL?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why This Holder, Not a Plastic Tray</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">01</div>
+        <h3>Mino Ware Craftsmanship</h3>
+        <p>Mino ware is one of Japan's most established ceramic traditions — this bowl brings that same quality to a daily incense ritual.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">02</div>
+        <h3>Catches Ash Cleanly</h3>
+        <p>The deep bowl shape keeps ash contained, so you can enjoy the ritual without worrying about your table or shelf.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">03</div>
+        <h3>Wabi-Sabi Design</h3>
+        <p>The metallic, uneven glaze finish means no two bowls look quite the same — a small, imperfect beauty by design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="incense-holder-photo.jpg" alt="Close view of ceramic incense bowl glaze and brass incense stick stand">
+    <div class="copy">
+      <h2>Built for the Ritual, Not Just the Shelf</h2>
+      <p>A good incense holder disappears into the moment — it should hold the stick steady, catch the ash, and look calm sitting on a nightstand or entryway table between uses.</p>
+      <p>This 3.9 inch bowl comes with a brass incense stand insert, so it works with standard incense sticks right out of the box.</p>
+      <ul class="specs">
+        <li><span>—</span>3.9 inch (100mm) ceramic bowl</li>
+        <li><span>—</span>Includes brass incense stick stand</li>
+        <li><span>—</span>Metallic black, brown & gold glaze finish</li>
+        <li><span>—</span>Rated 4.4★, 100+ bought in the past month</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>Where It Fits Best</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Bedside Table</h3>
+        <p>A calming addition to a wind-down routine before sleep.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Entryway Console</h3>
+        <p>A quiet, welcoming scent as soon as you walk in.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Meditation Corner</h3>
+        <p>Pairs naturally with a zen garden kit or reading nook.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>Does it work with any incense stick?</h3>
+    <p>Yes — the brass stand insert fits standard-diameter incense sticks.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is the glaze finish durable?</h3>
+    <p>It's a fired ceramic glaze meant for everyday use — just avoid dropping it like any ceramic piece.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it easy to clean?</h3>
+    <p>Ash wipes out easily with a soft cloth or brush between uses.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Give Your Incense Ritual a Proper Home</h2>
+    <p>A handcrafted-style Mino ware ceramic incense holder — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B09VXG99NL?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by Asayu Japan or Amazon.</p>
+</footer>
+
+</body>
+</html>

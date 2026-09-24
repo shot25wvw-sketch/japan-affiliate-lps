@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoyeido Japanese Incense Sticks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --smoke: #d9d3c7;
+    --cream: #f3ede1;
+    --ink: #2b2823;
+    --charcoal: #3a352d;
+    --accent: #a9825a;
+    --soft: #e6ddc9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(180deg, #241f19 0%, #3a352d 60%, #4a4338 100%);
+    color: var(--cream);
+    padding: 72px 24px 88px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #d8cfc0;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .hero-img {
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #241f19;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 24px rgba(169,130,90,0.35);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(169,130,90,0.45); }
+
+  section { padding: 72px 24px; }
+  .benefits { background: var(--cream); }
+  .benefits h2 { text-align: center; font-size: 34px; margin-bottom: 48px; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--soft);
+    padding: 32px 28px;
+    border-radius: 6px;
+  }
+  .benefit-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .benefit-card p { font-size: 15px; color: var(--charcoal); }
+
+  .spotlight {
+    background: var(--charcoal);
+    color: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 6px; }
+  .spotlight .copy h2 { font-size: 32px; margin-bottom: 18px; color: var(--cream); }
+  .spotlight .copy p { color: #d8cfc0; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 24px; font-size: 14px; color: #d8cfc0; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .spotlight .specs li span { color: var(--accent); margin-right: 8px; }
+
+  .steps { background: var(--soft); text-align: center; }
+  .steps h2 { font-size: 32px; margin-bottom: 44px; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .step-row div { background: var(--cream); padding: 28px 20px; border-radius: 6px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--accent); color: #fff; border-radius: 50%;
+    margin-bottom: 12px; font-family: 'Cormorant Garamond', serif;
+  }
+  .step-row h3 { font-size: 17px; margin-bottom: 8px; }
+  .step-row p { font-size: 14px; color: var(--charcoal); }
+
+  .faq { background: var(--cream); max-width: 760px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid var(--soft); padding: 20px 0; }
+  .faq-item h3 { font-size: 17px; margin-bottom: 8px; }
+  .faq-item p { font-size: 15px; color: var(--charcoal); }
+
+  .final-cta {
+    background: linear-gradient(180deg, #4a4338 0%, #241f19 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 88px 24px;
+  }
+  .final-cta h2 { font-size: 36px; max-width: 640px; margin: 0 auto 16px; }
+  .final-cta p { color: #d8cfc0; max-width: 520px; margin: 0 auto 32px; font-size: 16px; }
+
+  footer { background: #16130f; color: #a89c8a; text-align: center; padding: 32px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Since 1705, Kyoto</div>
+    <h1>The Quiet Ritual of Real Japanese Incense</h1>
+    <p class="sub">A single stick, a thin trail of smoke, a room that suddenly feels calmer — Shoyeido's Moss Garden blend, made in Kyoto since the Edo period.</p>
+    <div class="hero-img">
+      <img src="incense-sticks-photo.jpg" alt="Thin Japanese incense sticks burning in a dark ceramic bowl on tatami">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01N30N92R?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why This Isn't Just Another Scented Stick</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">01</div>
+        <h3>320 Years of Craft</h3>
+        <p>Shoyeido has blended incense in Kyoto since 1705 — this isn't a mass-market air freshener, it's a centuries-old formula.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">02</div>
+        <h3>Subtle, Not Overpowering</h3>
+        <p>The Moss Garden blend is soft and woody — meant to fill a room gently, not announce itself from the hallway.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">03</div>
+        <h3>500 Sticks, Long Lasting</h3>
+        <p>A single box covers months of daily use — light one during tea, reading, or a quiet evening wind-down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="incense-sticks-photo.jpg" alt="Close view of Japanese incense sticks and rising smoke">
+    <div class="copy">
+      <h2>A Two-Minute Ritual for the End of the Day</h2>
+      <p>Light one stick, set it in a small holder, and let the scent do the rest. It's one of the simplest ways to mark a transition — from work to rest, from noise to quiet.</p>
+      <p>Moss Garden is a soft, earthy fragrance inspired by the mossy temple gardens of Kyoto — grounding without being heavy.</p>
+      <ul class="specs">
+        <li><span>—</span>500 sticks per box</li>
+        <li><span>—</span>Moss Garden (Nokiba) scent — soft, woody, earthy</li>
+        <li><span>—</span>Handcrafted by Shoyeido, Kyoto, since 1705</li>
+        <li><span>—</span>Rated 4.6★ from 3,100+ reviews</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How to Use It</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Light the Tip</h3>
+        <p>Hold a flame to the tip for a few seconds, then blow it out gently.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Set It Upright</h3>
+        <p>Place it in a heatproof holder or bowl of ash or sand.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Let It Burn Slowly</h3>
+        <p>Each stick burns for around 20-30 minutes, releasing a soft, even scent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>Is the scent strong?</h3>
+    <p>It's designed to be gentle and ambient rather than overpowering — noticeable, not overwhelming.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do I need a special holder?</h3>
+    <p>Any heatproof incense holder or a small bowl with ash or sand works — see our companion ceramic holder pick.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How long does one box last?</h3>
+    <p>With 500 sticks and roughly 20-30 minutes per stick, it typically lasts for months of regular use.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Bring a 320-Year-Old Ritual Into Your Evening</h2>
+    <p>Handcrafted incense from Kyoto's Shoyeido — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01N30N92R?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by Shoyeido or Amazon.</p>
+</footer>
+
+</body>
+</html>
