@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Zen Garden Desk Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --stone: #2b2b28;
+    --sand: #f4efe6;
+    --ink: #2a2a26;
+    --charcoal: #3a3a35;
+    --accent: #8a9a7e;
+    --soft: #eae3d3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--sand);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(180deg, #1c1c19 0%, #2b2b28 60%, #3a3a35 100%);
+    color: var(--sand);
+    padding: 72px 24px 88px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #cfc9ba;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .hero-img {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #1c1c19;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 24px rgba(138,154,126,0.35);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(138,154,126,0.45); }
+
+  section { padding: 72px 24px; }
+  .benefits { background: var(--sand); }
+  .benefits h2 { text-align: center; font-size: 34px; margin-bottom: 48px; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--soft);
+    padding: 32px 28px;
+    border-radius: 6px;
+  }
+  .benefit-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .benefit-card p { font-size: 15px; color: var(--charcoal); }
+
+  .spotlight {
+    background: var(--charcoal);
+    color: var(--sand);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 6px; }
+  .spotlight .copy h2 { font-size: 32px; margin-bottom: 18px; color: var(--sand); }
+  .spotlight .copy p { color: #cfc9ba; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 24px; font-size: 14px; color: #cfc9ba; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .spotlight .specs li span { color: var(--accent); margin-right: 8px; }
+
+  .steps { background: var(--soft); text-align: center; }
+  .steps h2 { font-size: 32px; margin-bottom: 44px; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .step-row div { background: var(--sand); padding: 28px 20px; border-radius: 6px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--accent); color: #fff; border-radius: 50%;
+    margin-bottom: 12px; font-family: 'Cormorant Garamond', serif;
+  }
+  .step-row h3 { font-size: 17px; margin-bottom: 8px; }
+  .step-row p { font-size: 14px; color: var(--charcoal); }
+
+  .faq { background: var(--sand); max-width: 760px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid var(--soft); padding: 20px 0; }
+  .faq-item h3 { font-size: 17px; margin-bottom: 8px; }
+  .faq-item p { font-size: 15px; color: var(--charcoal); }
+
+  .final-cta {
+    background: linear-gradient(180deg, #3a3a35 0%, #1c1c19 100%);
+    color: var(--sand);
+    text-align: center;
+    padding: 88px 24px;
+  }
+  .final-cta h2 { font-size: 36px; max-width: 640px; margin: 0 auto 16px; }
+  .final-cta p { color: #cfc9ba; max-width: 520px; margin: 0 auto 32px; font-size: 16px; }
+
+  footer { background: #14140f; color: #a89c8a; text-align: center; padding: 32px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Desktop Mindfulness</div>
+    <h1>A Two-Minute Ritual That Resets Your Whole Afternoon</h1>
+    <p class="sub">Rake the sand, place the stones, breathe — a traditional Japanese zen garden sized for your desk.</p>
+    <div class="hero-img">
+      <img src="zen-garden-photo.jpg" alt="Black wooden tray zen garden with raked white sand, stones, and a small wooden rake">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B089VZGHLF?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why a Zen Garden Belongs on Your Desk</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">01</div>
+        <h3>A Built-In Break</h3>
+        <p>Raking sand for sixty seconds between meetings is a small, physical way to step out of screen time without leaving your desk.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">02</div>
+        <h3>6 Tools, 15 Accessories</h3>
+        <p>Everything needed to recreate different patterns and layouts — this isn't a one-trick sandbox, it's a full mindfulness set.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">03</div>
+        <h3>Looks Intentional, Not Cluttered</h3>
+        <p>Unlike most desk toys, a raked sand tray reads as calm and deliberate — a quiet complement to any workspace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="zen-garden-photo.jpg" alt="Close view of raked sand patterns and dark stones in a zen garden tray">
+    <div class="copy">
+      <h2>Rooted in a 500-Year-Old Practice</h2>
+      <p>Karesansui — Japanese dry landscape gardening — uses raked gravel and placed stones to represent water and mountains. This kit brings that same practice to an 11x8 inch desktop tray.</p>
+      <p>There's no plant care, no mess, and no wrong way to rake it — just a few minutes of quiet focus whenever you need it.</p>
+      <ul class="specs">
+        <li><span>—</span>11 x 8 inch tray, desk or shelf sized</li>
+        <li><span>—</span>Includes 6 tools and 15 accessories</li>
+        <li><span>—</span>Fine white sand, no watering or upkeep</li>
+        <li><span>—</span>Rated 4.7★ from 1,600+ reviews</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How the Ritual Works</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Smooth the Sand</h3>
+        <p>Use the flat tool to reset the tray to a blank canvas.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Rake a Pattern</h3>
+        <p>Draw slow, deliberate lines — waves, spirals, or straight rows.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Place the Stones</h3>
+        <p>Arrange the accessories to finish your miniature landscape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>Does the sand make a mess?</h3>
+    <p>It stays contained in the wooden tray during normal use — no water or spills involved.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it just for offices?</h3>
+    <p>It works equally well on a home desk, nightstand, or meditation corner — anywhere you want a small reset ritual.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What's included exactly?</h3>
+    <p>The tray, fine sand, a rake, and a full set of stones and accessories for building different layouts.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Give Yourself One Calm Corner of the Desk</h2>
+    <p>A traditional zen sand garden, sized for daily use — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B089VZGHLF?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by Island Falls Home or Amazon.</p>
+</footer>
+
+</body>
+</html>
