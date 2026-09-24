@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Great Wave Canvas Wall Art</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #1c3d5a;
+    --wave: #2f6690;
+    --cream: #f4efe4;
+    --ink: #202733;
+    --charcoal: #2d3745;
+    --accent: #c99a4b;
+    --soft: #e3ddca;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  a { text-decoration: none; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(180deg, #10202e 0%, #1c3d5a 55%, #2f6690 100%);
+    color: var(--cream);
+    padding: 72px 24px 88px;
+    text-align: center;
+  }
+  header.hero .eyebrow {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 720px;
+    margin: 0 auto 20px;
+  }
+  header.hero p.sub {
+    font-size: 18px;
+    color: #d3dde6;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+  .hero-img {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto 36px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .hero-img img { width: 100%; display: block; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #10202e;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 8px 24px rgba(201,154,75,0.35);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,154,75,0.45); }
+
+  section { padding: 72px 24px; }
+  .benefits { background: var(--cream); }
+  .benefits h2 { text-align: center; font-size: 34px; margin-bottom: 48px; }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .benefit-card {
+    background: #fff;
+    border: 1px solid var(--soft);
+    padding: 32px 28px;
+    border-radius: 6px;
+  }
+  .benefit-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .benefit-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .benefit-card p { font-size: 15px; color: var(--charcoal); }
+
+  .spotlight {
+    background: var(--charcoal);
+    color: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .spotlight img { width: 100%; border-radius: 6px; }
+  .spotlight .copy h2 { font-size: 32px; margin-bottom: 18px; color: var(--cream); }
+  .spotlight .copy p { color: #d3dde6; margin-bottom: 14px; font-size: 16px; }
+  .spotlight .specs { list-style: none; margin-top: 24px; font-size: 14px; color: #d3dde6; }
+  .spotlight .specs li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .spotlight .specs li span { color: var(--accent); margin-right: 8px; }
+
+  .steps { background: var(--soft); text-align: center; }
+  .steps h2 { font-size: 32px; margin-bottom: 44px; }
+  .step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .step-row div { background: var(--cream); padding: 28px 20px; border-radius: 6px; }
+  .step-row .step-num {
+    display: inline-block; width: 32px; height: 32px; line-height: 32px;
+    background: var(--wave); color: #fff; border-radius: 50%;
+    margin-bottom: 12px; font-family: 'Cormorant Garamond', serif;
+  }
+  .step-row h3 { font-size: 17px; margin-bottom: 8px; }
+  .step-row p { font-size: 14px; color: var(--charcoal); }
+
+  .faq { background: var(--cream); max-width: 760px; margin: 0 auto; }
+  .faq h2 { text-align: center; font-size: 32px; margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid var(--soft); padding: 20px 0; }
+  .faq-item h3 { font-size: 17px; margin-bottom: 8px; }
+  .faq-item p { font-size: 15px; color: var(--charcoal); }
+
+  .final-cta {
+    background: linear-gradient(180deg, #2f6690 0%, #10202e 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 88px 24px;
+  }
+  .final-cta h2 { font-size: 36px; max-width: 640px; margin: 0 auto 16px; }
+  .final-cta p { color: #d3dde6; max-width: 520px; margin: 0 auto 32px; font-size: 16px; }
+
+  footer { background: #0c161f; color: #a8b7c2; text-align: center; padding: 32px 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .benefit-grid, .step-row { grid-template-columns: 1fr; }
+    .spotlight { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Hokusai, c. 1831</div>
+    <h1>The Most Famous Wave in Art History, Ready to Hang</h1>
+    <p class="sub">A gallery-quality canvas reproduction of Katsushika Hokusai's "The Great Wave off Kanagawa" — one piece, instant focal point.</p>
+    <div class="hero-img">
+      <img src="great-wave-art-photo.jpg" alt="Framed canvas print of The Great Wave off Kanagawa hanging above a console table with a bonsai tree">
+    </div>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01B4IZ3Y4?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">See It on Amazon →</a>
+  </div>
+</header>
+
+<section class="benefits">
+  <div class="wrap">
+    <h2>Why This Print, Not a Generic Ocean Poster</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">01</div>
+        <h3>The Original Masterpiece</h3>
+        <p>This is Hokusai's actual 1831 woodblock composition — one of the most recognized artworks in the world, not a modern reinterpretation.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">02</div>
+        <h3>Ready to Hang</h3>
+        <p>Giclée printed on canvas and stretched over a wood frame — arrives ready for the wall, no separate framing needed.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">03</div>
+        <h3>Instant Conversation Piece</h3>
+        <p>Recognizable enough that guests notice it, timeless enough that it never feels like a trend piece.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spotlight">
+  <div class="wrap" style="display:contents;">
+    <img src="great-wave-art-photo.jpg" alt="Close view of the Great Wave off Kanagawa canvas print detail">
+    <div class="copy">
+      <h2>A 200-Year-Old Composition That Still Feels Modern</h2>
+      <p>Hokusai's wave, with Mount Fuji small in the background, has influenced everything from fine art to graphic design and pop culture. It works in a minimalist living room as easily as a traditional one.</p>
+      <p>The bold blues and cream tones make it a strong anchor piece — pair it with simple furniture and let the print do the talking.</p>
+      <ul class="specs">
+        <li><span>—</span>Giclée print on canvas, gallery-wrapped</li>
+        <li><span>—</span>Available in multiple sizes</li>
+        <li><span>—</span>Ready to hang, no additional framing needed</li>
+        <li><span>—</span>Rated 4.8★ from 1,100+ reviews</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>Where It Works Best</h2>
+    <div class="step-row">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Above a Console or Sofa</h3>
+        <p>A single large statement piece over furniture with breathing room around it.</p>
+      </div>
+      <div>
+        <div class="step-num">2</div>
+        <h3>Home Office</h3>
+        <p>A calm but striking backdrop for video calls and focused work.</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <h3>Entryway</h3>
+        <p>A strong first impression that sets a design tone for the whole home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Before You Order</h2>
+  <div class="faq-item">
+    <h3>What sizes are available?</h3>
+    <p>Multiple sizes are offered — check the product page for the current size options and dimensions.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Does it need a frame?</h3>
+    <p>No — it's gallery-wrapped canvas, stretched and ready to hang as-is.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is the print faded or muted looking?</h3>
+    <p>No — it reproduces the classic bold blue and cream palette of the original woodblock print.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Give One Wall a 200-Year-Old Icon</h2>
+    <p>A ready-to-hang canvas reproduction of Hokusai's most famous work — see current pricing and availability on Amazon.</p>
+    <a class="cta-btn" href="https://www.amazon.com/dp/B01B4IZ3Y4?tag=excellentjapa-20" rel="nofollow sponsored noopener" target="_blank">Check Price on Amazon →</a>
+  </div>
+</section>
+
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>This page is an independent product guide and is not affiliated with, endorsed by, or sponsored by Wieco Art or Amazon. The original artwork by Katsushika Hokusai is in the public domain.</p>
+</footer>
+
+</body>
+</html>
